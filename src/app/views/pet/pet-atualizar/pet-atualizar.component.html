@@ -1,0 +1,66 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        Editar Pet - {{editarNomeModal}}
+    </h5>
+    <button class="close" (click)="fecharModal()">&times;</button>
+</div>
+
+<div class="modal-body">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" [(ngModel)]="pet.name" class="form-control" name="nome" id="nome"
+                    [ngClass]="{'msg-erro-borda': mensagemErroNome != ''}">
+                <span class="text-danger msg-erro-form" *ngIf="mensagemErroNome != ''">
+                    <p [innerHTML]="mensagemErroNome"></p>
+                </span>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="apelido">Apelido</label>
+                <input type="text" [(ngModel)]="pet.nickName" class="form-control" name="apelido" id="apelido"
+                    placeholder="" [ngClass]="{'msg-erro-borda': mensagemErroApelido != ''}">
+                <span class="text-danger msg-erro-form" *ngIf="mensagemErroApelido != ''">
+                    <p [innerHTML]="mensagemErroApelido"></p>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="raca"> Raça </label>
+                <input type="text" [(ngModel)]="pet.breed" name="raca" id="raca" class="form-control"
+                    [ngClass]="{'msg-erro-borda': mensagemErroRaca != ''}">
+                <span class="text-danger msg-erro-form" *ngIf="mensagemErroRaca != ''">
+                    <p [innerHTML]="mensagemErroRaca"></p>
+                </span>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="especie"> Espécie </label>
+                <input type="text" [(ngModel)]="pet.species" name="especie" id="especie" class="form-control"
+                    [ngClass]="{'msg-erro-borda': mensagemErroEspecie != ''}">
+                <span class="text-danger msg-erro-form" *ngIf="mensagemErroEspecie != ''">
+                    <p [innerHTML]="mensagemErroEspecie"></p>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="dono"> Dono </label>
+            <select [(ngModel)]="pet.ownerId" class="form-control" id="dono" [ngModelOptions]="{standalone: true}">
+                <option *ngFor="let dono of donos" [ngValue]="dono.id">{{dono.name}}</option>
+            </select>
+
+            <span class="text-danger msg-erro-form" *ngIf="mensagemErroDono != ''">
+                <p [innerHTML]="mensagemErroDono"></p>
+            </span>
+        </div>
+
+    </form>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" (click)="fecharModal()">fechar</button>
+    <button type="button" class="btn btn-dark" (click)="atualizar()">salvar</button>
+</div>

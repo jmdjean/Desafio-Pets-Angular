@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+.padding-layout{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.header-pagina-padrao{
+    padding: 10px;
+    width: 100%;
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5px;
+    padding-right: 15px;
+    background-color: #343a40 !important;
+    color: white;
+    text-align: right;
+
+    .msg{
+      display: flex;
+      justify-content: space-between;
+    }
+ }
+
+ .msg-erro-form{
+   font-size: 9pt;
+ }
+ 
+ .msg-erro-borda{
+  border-color: red !important;
+}
+
+.nome-deletar-cor{
+  color:#007bff;
+ }
+ 
+ .msg-exclusao{
+     font-size: 14pt;
+ }
+
+ .filtro-padrao{
+   margin-top: 10px;
+ }
+
+.msg-sem-registro{
+  margin-top: 60px;
+}
+
+.mouse-pointer:hover{
+  cursor: pointer;
+}
+
+ .tabela-listagem-padrao{
+     height: 350px;
+     overflow-y: auto;
+ }
+
+ ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

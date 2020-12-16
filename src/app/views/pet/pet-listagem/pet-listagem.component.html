@@ -1,0 +1,63 @@
+<div class="header-pagina-padrao">
+    <h3>{{ nomeTela }}</h3>
+    <button class="btn btn-dark" (click)="abrirModalAdicionar()">
+        <i class="fas fa-plus fa-sm"></i>  &nbsp; adicionar
+    </button>
+</div>
+
+<div class="form-group row filtro-padrao">
+    <label class="col-sm-2 col-form-label" for="filtro">Filtrar pets: </label>
+    <div class="col-sm-10">
+        <input type="text" placeholder="Digite nome, apelido, raça, especie ou dono " [(ngModel)]="filtro" class="form-control" name="filtro" id="filtro">
+    </div>
+</div>
+
+<div class="tabela-listagem-padrao">
+    <table class="table table-striped" *ngIf="pets">
+        <thead>
+            <th>
+                <label>Nome</label>
+            </th>
+            <th>
+                <label>Apelido</label>
+            </th>
+            <th>
+                <label>Raça</label>
+            </th>
+            <th>
+                <label>Espécie</label>
+            </th>
+            <th>
+                <label>Nome do Dono</label>
+            </th>
+            <th>
+                <label>Telefone do Dono</label>
+            </th>
+            <th>
+                <label>Ações</label>
+            </th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let pet of pets | filter: filtro">
+                <td>{{ pet.name }}</td>
+                <td>{{ pet.nickName }}</td>
+                <td>{{ pet.breed }}</td>
+                <td>{{ pet.species }}</td>
+                <td>{{ pet.donoName ? pet.donoName : 'Pet não possui dono.' }}</td>
+                <td>{{ pet.donoPhone | mask:'(00) 0 0000-0000'}}</td>
+                <td class="align-middle">
+                    <i class="fas fa-eye mouse-pointer" (click)="abriModalVisualizar(pet)" title="Visualizar"></i>&nbsp;
+                    <i class="fas fa-edit mouse-pointer" (click)="abriModalEditar(pet)" title="Atualizar"></i>&nbsp;
+                    <i class="fas fa-trash-alt mouse-pointer" (click)="abriModalDeletar(pet)" title="Deletar"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center msg-sem-registro" *ngIf="!pets">
+        <h2>
+            Não possui nenhum pet.
+        </h2>
+    </div>
+</div>

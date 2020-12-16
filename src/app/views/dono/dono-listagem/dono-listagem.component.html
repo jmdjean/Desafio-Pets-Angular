@@ -1,0 +1,53 @@
+<div class="header-pagina-padrao">
+    <h3>{{ nomeTela }}</h3>
+    <button class="btn btn-dark" (click)="abrirModalAdicionar()">
+        <i class="fas fa-plus fa-sm"></i> &nbsp; adicionar
+    </button>
+</div>
+
+<div class="form-group row filtro-padrao">
+    <label class="col-sm-2 col-form-label" for="filtro">Filtrar donos: </label>
+    <div class="col-sm-10">
+        <input type="text" placeholder="Digite nome, e-mail ou telefone " [(ngModel)]="filtro" class="form-control" name="filtro" id="filtro">
+    </div>
+</div>
+
+<div class="tabela-listagem-padrao">
+    <table class="table table-striped" *ngIf="donos.length > 0">
+        <thead>
+            <th>
+                <label>Nome</label>
+            </th>
+            <th>
+                <label>E-mail</label>
+            </th>
+            <th>
+                <label>Telefone</label>
+            </th>
+
+            <th>
+                <label>Ações</label>
+            </th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let dono of donos | filter: filtro">
+                <td>{{ dono.name }}</td>
+                <td>{{ dono.email }}</td>
+                <td>{{ dono.phone | mask:'(00) 0 0000-0000'}}</td>
+                <td class="align-middle">
+                    <i class="fas fa-eye mouse-pointer" (click)="abriModalVisualizar(dono)"
+                        title="Visualizar"></i>&nbsp;
+                    <i class="fas fa-edit mouse-pointer" (click)="abriModalEditar(dono)" title="Atualizar"></i>&nbsp;
+                    <i class="fas fa-trash-alt mouse-pointer" (click)="abriModalDeletar(dono)" title="Deletar"></i>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="text-center msg-sem-registro" *ngIf="donos.length == 0">
+        <h3>
+            Não possui nenhum dono.
+        </h3>
+    </div>
+</div>

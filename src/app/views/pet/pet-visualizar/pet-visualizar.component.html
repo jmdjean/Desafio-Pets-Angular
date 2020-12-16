@@ -1,0 +1,60 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        Visualizar Pet
+    </h5>
+    <button class="close" (click)="fecharModal()">&times;</button>
+</div>
+
+<div class="modal-body">
+    <form>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="nome">Nome</label>
+                <input type="text" [(ngModel)]="pet.name" disabled="camposBloqueados" class="form-control" name="nome"
+                    id="nome">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="apelido">Apelido</label>
+                <input type="text" [(ngModel)]="pet.nickName" disabled="camposBloqueados" class="form-control"
+                    name="apelido" id="apelido">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="raca"> Raça </label>
+                <input type="text" [(ngModel)]="pet.breed" disabled="camposBloqueados" name="raca" id="raca"
+                    class="form-control">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="especie"> Espécie </label>
+                <input type="text" [(ngModel)]="pet.species" disabled="camposBloqueados" name="especie" id="especie"
+                    class="form-control">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                <label for="dono"> Dono </label>
+                <input type="text" [(ngModel)]="pet.donoName" disabled="camposBloqueados" name="dono" id="dono"
+                    class="form-control">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="email"> Email do Dono </label>
+                <input type="text" [(ngModel)]="pet.donoEmail" disabled="camposBloqueados" name="email" id="email"
+                    class="form-control">
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="telefone"> Telefone do Dono </label>
+                <input type="text" [(ngModel)]="pet.donoPhone" disabled="camposBloqueados" name="telefone" id="telefone"
+                    mask="(00) 0 0000-0000" class="form-control">
+            </div>
+        </div>
+
+    </form>
+</div>

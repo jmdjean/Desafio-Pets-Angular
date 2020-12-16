@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        Deletar Pet
+    </h5>
+    <button class="close" (click)="fecharModal()">&times;</button>
+</div>
+
+<div class="modal-body">
+    <p class="msg-exclusao">Deseja realmete excluir o pet <span class="nome-deletar-cor">"{{pet.name}}"</span> ?</p>
+</div>
+
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-primary" (click)="fecharModal()">fechar</button>
+    <button type="button" class="btn btn-dark" (click)="deletarPet()">confirmar</button>
+</div>
