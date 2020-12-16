@@ -1,27 +1,86 @@
-# PetsJean
+Desafio realizado utilizando angular.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
+Após baixar o projeto, utilize npm install para instalar as dependencias e após isso basta utilizar o ng serve.
 
-## Development server
+Desafio Frontend Backoffice Protheus 2020
+Olá! Seja bem vindo! Muito obrigado por querer fazer parte do nosso time!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Abaixo você encontrará as informações necessárias para realizar o desafio.
 
-## Code scaffolding
+Importante!
+A entrega poderá ser realizada através de um Pull Request ou enviando o projeto zipado para nairan.asilva[a]gmail.com;
+Não esqueça do arquivo README explicando como devemos rodar o seu projeto;
+Você poderá consultar o Google, Stackoverflow ou algum projeto particular na sua máquina;
+Não fique preso a entregar todo o desafio e sim entregar com a melhor qualidade no prazo estipulado;
+Fique à vontade para perguntar qualquer coisa =)!
+Boa sorte!
+Setup do projeto
+Angular CLI: 8+
+Node: 10+
+Angular: 8+
+Como submeter?
+Commite suas alterações de forma organizada;
+Um dia antes da entrevista será dada permissão para fazer o push/ abrir a pull request, abra uma pull request da sua branch para a master com a nomenclatura: Nome Sobrenome - dd-mm-yy
+Obs: Caso não tenha recebido permissão para realizar o push da branch entre em contato com o recrutador e envie seu usuário do GitHub
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Objetivo
+O objetivo desenvolver um controle de Pets e Donos.
 
-## Build
+Telas
+Pets
+O sistema deverá apresentar todos os pets cadastrados. Os campos apresentados serão:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Nome;
+Apelido;
+Raça;
+Especíe:
+Nome do Dono;
+Telefone do Dono;
+Ações Disponíveis: Possibilitar a manutenção de cadastros existentes e inclusão de novos registros;
 
-## Running unit tests
+Regras-Pets
+Todos os campos deverão ser preenchidos;
+O Pet deverá ser vinculado a um dono;
+Para alterções/deleções, o usuário precisará confirmar a operação;
+As Raças e Especíes deverão ser campos do tipo compo, com informações já definidas;
+Visualizar Pets
+O sistema deverá apresentar todos os dados dos Pets e do seu dono;
+Donos
+O sistema deverá apresentar todos os donos de pet cadastrados. Os campos apresentados serão:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Nome;
+E-mail;
+Telefone;
+Ações Disponíveis: Possibilitar a manutenção de cadastros existentes e inclusão de novos registros;
 
-## Running end-to-end tests
+Regras-Dono
+Todos os campos deverão ser preenchidos;
+Para alterções/deleções, o usuário precisará confirmar a operação;
+Visualizar Pets
+O sistema deverá apresentar todos os dados do seu dono e de todos os seus pets;
+APIs
+Pefixo: https://5f779702d5c9cb001623760a.mockapi.io/api/v1
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Donos
+Get: /owner
+Get ID: /owner/{id}
+Get Pets: /owner/{idOwner}/pets
+Post: /owner/{id}
+Put: /owner/{id}
+Delete: /owner/{id}
+Pets
+Get: /pets
+Get ID: /pets/{id}
+Post: /pets/{id}
+Put: /pets/{id}
+Delete: /pets/{id}
+Diferenciais
+Criar um processo de autenticação;
+Design Responsivo;
+Validação de formulários e máscaras;
+Simular paginação e pesquisas;
+Organização do Código e Commits;
+Casos de Testes;
+Caso tenha alguma sugestão de melhoria, nos avise!
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Boa sorte! 💙
