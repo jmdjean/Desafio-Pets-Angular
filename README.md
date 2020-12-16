@@ -2,9 +2,6 @@ Após baixar o projeto..
 - npm install 
 - ng serve --open --port 4201
 
-
-<h1>Desafio Frontend Backoffice Protheus 2020</h1>
-
 # Desafio Frontend Backoffice Protheus 2020
 
 Olá! Seja bem vindo! Muito obrigado por querer fazer parte do nosso time! 
